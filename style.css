@@ -1,0 +1,53 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding:0;
+    margin:0;
+    background-color:#003249;
+}
+
+.button-container{
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    margin:10px;
+    max-height:100vh;
+    /* will cover 100% of height at minimum */
+}
+.date-grid {
+    display:grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.date-grid button{
+    font-size:1.5rem;
+    background-color: #F5F1E3;
+    color:#003249;
+}
+
+.date-grid h3 {
+    text-align: center;
+    font-size:1.3rem;
+    color: #F5F1E3;
+} 
+
+   
+
+.button-container > button {
+    margin:10px;
+    width:50vh;
+    cursor:pointer;
+    font-size:1.5rem;
+    border: 1px solid white;
+    outline:none;
+    background-color: #60A561;
+    color: #F5F1E3;
+}
+
+.button-container > button:hover {
+    background-color: #FB4D3D;
+}
