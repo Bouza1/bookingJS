@@ -40,6 +40,9 @@ nextButton.addEventListener('click', () => {
         }
     })
 
+    const dbReqJSON = JSON.stringify(dateTitle.innerText)
+    console.log(dbReqJSON)
+
 })
 
 backButton.addEventListener('click', () => {
