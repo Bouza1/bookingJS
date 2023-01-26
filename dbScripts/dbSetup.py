@@ -12,19 +12,21 @@ def dateFormatter (number):
     return day3Letter + ' ' + month + ' ' + day  + ' ' + year
         
 
-def dbTableSetUp():
-    con = sqlite3.connect("main.db")
-    cur = con.cursor()
-    cur.execute("CREATE TABLE bookings(date, '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19')")
-
-
-def dbInsertDateTuples ():
-    con = sqlite3.connect("main.db")
-    cur = con.cursor()
-    for i in range(365):
-        cur.execute("INSERT INTO bookings (date) VALUES(?)", [dateFormatter(i)]) #needs to be in [] otherwise sqlite treats it as 4 spereate inputs split at the ' '
-    con.commit()
 
 def runDatTing():
+    con = sqlite3.connect("main.db")
+    cur = con.cursor()
+
+    def dbTableSetUp():
+        cur.execute("CREATE TABLE bookings('datee', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M')")
+
+    def dbInsertDateTuples ():
+        for i in range(365):
+            cur.execute("INSERT INTO bookings (datee) VALUES(?)", [dateFormatter(i)]) #needs to be in [] otherwise sqlite treats it as 4 spereate inputs split at the ' '
+        con.commit()
+
+  
     dbTableSetUp()
     dbInsertDateTuples()
+
+runDatTing()
