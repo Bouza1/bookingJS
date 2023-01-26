@@ -22,7 +22,7 @@ def dbInsertDateTuples ():
     con = sqlite3.connect("main.db")
     cur = con.cursor()
     for i in range(365):
-        cur.execute("INSERT INTO bookings (date) VALUES(?)", [dateFormatter(i)])
+        cur.execute("INSERT INTO bookings (date) VALUES(?)", [dateFormatter(i)]) #needs to be in [] otherwise sqlite treats it as 4 spereate inputs split at the ' '
     con.commit()
 
 def runDatTing():
