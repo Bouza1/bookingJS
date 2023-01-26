@@ -64,3 +64,9 @@ backButton.addEventListener('click', () => {
 
     })
 })
+
+window.onbeforeunload = confirmExit;
+function confirmExit(){
+    confirm("You Have Booked")
+    return false;
+}
