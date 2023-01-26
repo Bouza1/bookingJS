@@ -41,7 +41,7 @@ nextButton.addEventListener('click', () => {
     })
 
     const dbReqJSON = JSON.stringify(dateTitle.innerText)
-    console.log(dbReqJSON)
+    console.log(dbReqJSON) // send to server side and pull all times booked from db where dateTitle = PK of bookTBL
 
 })
 
