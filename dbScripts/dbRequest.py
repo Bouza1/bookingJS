@@ -21,7 +21,7 @@ def formatDateNTimeStr(dateNtimeString):
     con = sqlite3.connect("main.db")
     cur = con.cursor()
     username = 2449
-    for time in timesToInput:
+    for time in dateNtimeString:
         dateNStringArray = time.split()
         fullTime = dateNStringArray[4]
         time = fullTime.split(':')
