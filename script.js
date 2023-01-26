@@ -67,6 +67,7 @@ backButton.addEventListener('click', () => {
 
 window.onbeforeunload = confirmExit;
 function confirmExit(){
-    confirm("You Have Booked")
+    const jsonString = JSON.stringify(bookedTimesArray)
+    console.log(jsonString)
     return false;
 }
