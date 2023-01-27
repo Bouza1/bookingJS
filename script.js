@@ -8,6 +8,8 @@ let dateOn = new Date()
 console.log(dateOn)
 dateTitle.innerText = dateOn.toDateString()
 
+//initiate dataPull(dateOn.toDateString()) on load
+
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         console.log( `${dateTitle.innerText} ${button.innerText}`)
@@ -18,6 +20,7 @@ numberButtons.forEach(button => {
 })
 
 nextButton.addEventListener('click', () => {
+    //initiate dataPull(dateOn.toDateString()) in dbRequest.py
     numberButtons.forEach(button => { 
         button.style.backgroundColor = '#60A561'
     })
@@ -72,5 +75,6 @@ window.onbeforeunload = confirmExit;
 function confirmExit(){
     const jsonString = JSON.stringify(bookedTimesArray)
     console.log(jsonString)
+    // initate the send2DB() function in dbRequest.py
     return false;
 }
